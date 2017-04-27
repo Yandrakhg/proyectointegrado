@@ -1,21 +1,49 @@
-.margenes{
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 10px;
-}
-.tamañoDialog {
-    width: 900px;
-	margin-top: 30px;
-    margin: auto;
-    padding: 25px;
-}
-
-.textarea{
-    width:370px;
-    height:400px;
-    border: 1px dotted #000099;
-   
-
-}
+<div class="container">
+            <div class="row">
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="tamañoDialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="row" >
+                                    <div class="margenes col-lg-offset-1 text-center" >
+                                        <div class='row'>
+                                            <div class="col-md-6">
+                                                    <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=a3859018-4957-4eff-97ea-f32685d2c6e3" alt="">
+                                            </div>
+                                            <div class="col-md-6">
+                                               <textarea class="textarea" readonly>
+                                   
+                                                    <textarea class="textarea" readonly>adios
+                                                    </textarea>
+                                                
+                                             </textarea>
+                                         
+                                           </div><!-- row-->
+                                   </div><!-- márgenes-->
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="row" >
+                                    <div class="margenes col-lg-offset-1 text-center" >
+                                        <div class='row'>
+                                            <div class="col-md-3">
+                                                    <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=a3859018-4957-4eff-97ea-f32685d2c6e3" alt="">
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=a3859018-4957-4eff-97ea-f32685d2c6e3" alt="">
+                                            </div>
+                                            <div class="col-md-3">
+                                                    <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=a3859018-4957-4eff-97ea-f32685d2c6e3" alt="">
+                                            </div>
+                                           
+                                           </div><!-- row-->
+                                   </div><!-- márgenes-->
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                    </div>
