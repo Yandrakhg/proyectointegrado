@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/invitaciones.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="mainmenu-area">
+<div class="container">
+    <div class="row">
+        <!-- Modal -->
+        <div class="modal fade" id="myModalTraje1" role="dialog">
+            <div class="tamañoDialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row" >
+                            <div class="margenes col-lg-offset-1" >
+                                <div class='row'>
+                                    <div class="col-md-5">
+                                            <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=a3859018-4957-4eff-97ea-f32685d2c6e3" alt="">
+                                    </div>
+                                    <div class="col-md-7 cajaDocumentacion">
+                                        <h2 class='tituloLetra'>Dustin</h2>
+                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+                                        <h4 class='nombreLetra'>182€</h4>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
+                                        <br>
+                                        <div class="description-container"><p class="title">Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p></div>
+
+                                   </div><!-- row-->
+                           </div><!-- márgenes-->
+                        </div>
+                    </div>
+                    </div><!--modalBody-->
+                    <div class="modal-footer">
+                        <div class="row" >
+                            <div class="margenes col-lg-offset-1 text-center" >
+                                <div class='row'>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item">
+                                            <img class="img-portfolio img-responsive"  src="img/camara.jpg" alt=""></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item">
+                                            <img class="img-portfolio img-responsive"  src="img/camara.jpg" alt=""></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item">
+                                            <img class="img-portfolio img-responsive"  src="img/camara.jpg" alt=""></div>
+                                    </div>
+                                </div><!-- row-->
+                           </div><!-- márgenes-->
+                        </div>
+                    </div><!--modalFooter-->
+                </div>
+            </div><!--modalTamaño-->
+        </div><!--modalFade-->
+</div><!-- row-->
+    <div class="row">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-10 col-lg-offset-1 text-center">
+                                <div class='row'>
+                                    <div class="col-md-4">
+                                        <div class="portfolio-item ">Usuario:</div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtUsuario"></div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="portfolio-item ">Contraseña:</div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtContraseña"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="btnLogin" class="btn btn-default">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Registro</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-10 col-lg-offset-1 text-center">
+                                <div class='row'>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item ">Nombre:</div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtNombreUsuario"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item ">Apellidos:</div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtApellidosUsuario"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item ">DNI: </div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtDNIUsuario"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item ">Dirección:</div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtDireccionUsuario"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item ">Usuario:</div>
+                                    </div>
+
+                                    <div class="col-md-9">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtUsuarioR"></div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="portfolio-item ">Contraseña:</div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="portfolio-item"><input type="text" class='textField' id="txtContraseñaR"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" id="btnRegistro" class="btn btn-default">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi Boda<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Mi Perfíl</a></li>
+            <li><a href="#">Invitados</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Banquetes<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Catering</a></li>
+            <li><a href="#">Hacienda</a></li>
+          </ul>
+        </li>  
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Proveedores<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Fotógrafo</a></li>
+            <li><a href="#">Vehículos</a></li>
+            <li><a href="#">Viajes</a></li>
+            <li><a href="#">Flores</a></li>
+            <li><a href="#">Invitaciones</a></li>
+            <li><a href="#">Música</a></li>
+          </ul>
+        </li>
+         <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">El novio<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Trajes</a></li>
+          </ul>
+        </li> 
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">La novia<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Vestidos</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+ </div><!-- Row -->
+</div><!-- Container -->
+</div><!--Main menuArea-->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb1.jpg?alt=media&token=5f158006-272d-4058-83ca-f07a04f8d691" alt="">
+                        </div>
+
+                        <div class="item">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb1.jpg?alt=media&token=5f158006-272d-4058-83ca-f07a04f8d691" alt="">
+                        </div>
+
+                        <div class="item">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b" alt="">
+                        </div>
+
+                        <div class="item">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb1.jpg?alt=media&token=5f158006-272d-4058-83ca-f07a04f8d691" alt="">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+            </div><!-- /.carousel slide -->
+        </div><!-- /.col-lg-10 -->
+    </div><!-- /.row  -->
+</div><!-- /.container -->
+</section>
+<div class="divColeccion">
+    <h2 class="styleLetra">Colección 2018</h2>
+</div>
+ 
+    <!-- End Modal -->
+<section id="portfolio" class="portfolio">
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-10 col-lg-offset-1 text-center">
+            <hr class="small">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"></a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#"> <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"> </a>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-md-6">
+                    <div class="portfolio-item">
+                        <a href="#"> <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"> </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="portfolio-item">
+                        <a href="#"> <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"> </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="portfolio-item">
+                        <a href="#"> <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"> </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="portfolio-item">
+                        <a href="#"> <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"> </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="portfolio-item">
+                        <a href="#"> <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"> </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="portfolio-item">
+                        <a href="#"> <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"> </a>
+                    </div>
+                </div>
+            </div><!-- /.row (nested) -->
+        </div><!-- /.col-lg-10 -->
+    </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>Weddings</strong></h4>
+                <p>4424 Nervión <br> Sevilla, CP 41016</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i> 954799724</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">weddings@gmail.com</a> </li>
+                </ul>
+                <br>
+                <ul class="list-inline">
+                    <li> <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a> </li>
+                    <li> <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a> </li>
+                    <li> <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a> </li>
+                </ul>
+                <hr class="small">
+                <p class="text-muted">Copyright &copy; Website 2017</p>
+            </div>
+        </div>
+    </div>
+    <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> </footer><!-- Footer -->
+<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+    apiKey: "AIzaSyC0U8qHK8KHlaYIjp8M2SYvhsIfwa17dfI",
+    authDomain: "proyectoeventos-53630.firebaseapp.com",
+    databaseURL: "https://proyectoeventos-53630.firebaseio.com",
+    projectId: "proyectoeventos-53630",
+    storageBucket: "proyectoeventos-53630.appspot.com",
+    messagingSenderId: "466522661750"
+};
+
+firebase.initializeApp(config);
+    var dialog = document.getElementsByTagName("dialog");
+    var txtUsuario = document.getElementById('txtUsuario');
+    var txtContraseña = document.getElementById('txtContraseña');
+    var txtUsuarioR = document.getElementById('txtUsuarioR');
+    var txtContraseñaR = document.getElementById('txtContraseñaR');
+    var txtNombreUsuario = document.getElementById('txtNombreUsuario');
+    var txtApellidosUsuario = document.getElementById('txtApellidosUsuario');
+    var txtDireccionUsuario = document.getElementById('txtDireccionUsuario');
+    var txtDNIUsuario = document.getElementById('txtDNIUsuario');
+    var btnLogin = document.getElementById('btnLogin');
+    var btnRegistro = document.getElementById('btnRegistro');
+    var consulta1 = firebase.database().ref("Usuarios/").limitToFirst(1);
+    var consulta2 = firebase.database().ref('Usuarios/').limitToLast(1);
+
+/*var usu =document.getElementById("ahinojosa");*/
+var ref = firebase.database().ref('Usuarios');
+//	  var refi = ref.child(txtDNIUsuario);
+
+btnRegistro.addEventListener('click', function() {
+    var nombre = txtNombreUsuario.value;
+    var apellidos = txtApellidosUsuario.value;
+    var dni = txtDNIUsuario.value;
+    var dir = txtDireccionUsuario.value;
+    var usu = txtUsuarioR.value;
+    var pass = txtContraseñaR.value;
+    firebase.database().ref('Usuarios/' + dni).set({
+        Nombre: nombre,
+        Apellidos: apellidos,
+        Direccion: dir,
+        DNI: dni,
+        Usuario: usu,
+        Contraseña: pass
+        Contraseña: pass
+    });
+});
+
+btnLogin.addEventListener('click', function(txtDNIUsuario) {
+    var dni = txtUsuario.value;
+    var pass = txtContraseña.value;
+    var consulta1 = firebase.database().ref("Usuarios/").limitToFirst(1234);
+    var consulta2 = firebase.database().ref('Usuarios/').limitToLast(1234);
+
+    consulta2.database().ref('Usuarios/' + dni + '/App').on('value', function(snapshot) {
+        console.log(snapshot.val());
+    });
+
+});
+
+ref.on('value', function(snapshot) {
+    console.log(snapshot.val());
+});
+
+</script>
+</body>
+</html>

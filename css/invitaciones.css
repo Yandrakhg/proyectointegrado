@@ -1,48 +1,54 @@
-.cubo{
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 20px;
+.textField{
+    width: 100%;
 }
-.div-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+.divColeccion{
+    background-color: #5B5B5B;
+    width: 100%;
+    padding: 20px;
 }
-.div-img.hidden {
-  overflow: hidden;
+.tituloLetra{
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    color: #3e3e3e;
+    clear: both; 
 }
-.div-img .img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  -moz-transform: translate(0px, 0px);
-  -webkit-transform: translate(0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  -ms-transition: all 500ms ease-in-out;
-  -o-transition: all 500ms ease-in-out;
+.nombreLetra{
+    line-height: 1.1;
+    font-size: 1;
+    color: #757676;
+    clear: both;
 }
-.div-img .text {
-  font-family: 'Open Sans';
-  position: absolute;
-  z-index: -1;
-  display: block;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
+
+.margenMenu{
+    padding-right: 5px;
+	padding-left: 5px;
+	width: 90%;
 }
-.div-img:hover .img {
-  transform: translate(0px, -100px);
-  -ms-transform: translate(0px, -100px);
-  -moz-transform: translate(0px, -100px);
-  -webkit-transform: translate(0px, -100px);
-  -o-transform: translate(0px, -100px);
+.margenes{
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10px;
+}
+.tamañoDialog {
+    width: 65%;
+    height: 65%;
+    margin: auto;
+    background-color: #EDEDED;
+}
+.textArea{
+    width: 100%;
+    resize: none;
+    border: 1px dotted #000099;
+}
+.cajaDocumentacion{
+  width: 80%;
+  border: 1px solid black;
+}
+.descriptionTextArea {
+    padding: .5em;
+}
+.contenidoTextArea{
+    
 }
