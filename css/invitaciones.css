@@ -32,23 +32,35 @@
     margin: 10px;
 }
 .tamañoDialog {
-    width: 65%;
-    height: 65%;
+    width: 80%;
     margin: auto;
+    margin-top: 10%;
+    border-radius: 15px;
     background-color: #EDEDED;
 }
-.textArea{
-    width: 100%;
-    resize: none;
-    border: 1px dotted #000099;
-}
 .cajaDocumentacion{
-  width: 80%;
+  width: 90%;
   border: 1px solid black;
+  margin-left: 5%;
 }
 .descriptionTextArea {
     padding: .5em;
 }
-.contenidoTextArea{
+.modalContenido{
     
+    height: 70%;
+    margin: auto;
+    position: relative;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #999;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 15px;
+	outline: 0;
+	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	box-shadow: 0 3px 9px rgba(0,0,0,.5)
+}
+.imagen{
+    vertical-align: middle;
 }
