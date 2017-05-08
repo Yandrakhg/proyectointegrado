@@ -27,7 +27,7 @@
                             <div class="margenes col-lg-offset-1" >
                                 <div class='row'>
                                     <div class="col-md-5">
-                                            <img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=a3859018-4957-4eff-97ea-f32685d2c6e3" alt="">
+                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustinG1.jpg?alt=media&token=4a526bb4-bf78-42ff-9548-37be2624ab48" id="muestra1">
                                     </div>
                                     <div class="col-md-6 cajaDocumentacion">
                                         <h2 class='tituloLetra'>Dustin</h2>
@@ -36,32 +36,35 @@
                                         <br>
                                         <br>
                                         <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea ">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
+                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
                                         <br>
-                                        <br>
-                                        <div class="description-container"><p class="title">Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
                                         <br></div>
 
-                                   </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
+                                   </div>
+                           </div><!-- row-->
+                        </div><!-- márgenes-->
                     </div>
                     </div><!--modalBody-->
                     <div class="modal-footer">
                         <div class="row" >
                             <div class="margenes col-lg-offset-1 text-center" >
                                 <div class='row'>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="portfolio-item">
-                                            <img class="img-portfolio img-responsive"  src="img/camara.jpg" alt=""></div>
+                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=59ba3875-4fbe-48dc-8bab-f22f44a793cc" id='traje1a' onclick="cambioTraje();" alt=""></a></div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="portfolio-item">
-                                            <img class="img-portfolio img-responsive"  src="img/camara.jpg" alt=""></div>
+                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1a.jpg?alt=media&token=03405e64-24a8-4a69-b2c7-3b85e2665bd8" id='traje1b' alt=""></div>
                                     </div>
-                                    <div class="col-md-3">
+                                    <div class="col-md-2">
                                         <div class="portfolio-item">
-                                            <img class="img-portfolio img-responsive"  src="img/camara.jpg" alt=""></div>
+                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1b.jpg?alt=media&token=6c4991a2-3a5e-45b9-8b04-8845ff69d69f" id='traje1c' alt=""></div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="portfolio-item">
+                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1c.jpg?alt=media&token=bd3a9da2-98c5-47d7-b697-bc2162440b1a" id='traje1d' alt=""></div>
                                     </div>
                                 </div><!-- row-->
                            </div><!-- márgenes-->
@@ -224,8 +227,8 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
     </div>
   </div>
@@ -293,7 +296,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-portfolio img-responsive" src="https://firebasestorage.googleapis.com/v0/b/prueba-37157.appspot.com/o/imagenesbb%2Fbb2.jpg?alt=media&token=8f4c3592-cf58-4341-a283-353debae739b"></a>
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1.jpg?alt=media&token=59ba3875-4fbe-48dc-8bab-f22f44a793cc" id="pTraje" alt=""></a>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
@@ -383,11 +386,9 @@ firebase.initializeApp(config);
     var txtDNIUsuario = document.getElementById('txtDNIUsuario');
     var btnLogin = document.getElementById('btnLogin');
     var btnRegistro = document.getElementById('btnRegistro');
-    var consulta1 = firebase.database().ref("Usuarios/").limitToFirst(1);
-    var consulta2 = firebase.database().ref('Usuarios/').limitToLast(1);
-
+    var registro= firebase.auth();
 /*var usu =document.getElementById("ahinojosa");*/
-var ref = firebase.database().ref('Usuarios');
+    var ref = firebase.database().ref('Usuarios');
 //	  var refi = ref.child(txtDNIUsuario);
 
 btnRegistro.addEventListener('click', function() {
@@ -404,25 +405,28 @@ btnRegistro.addEventListener('click', function() {
         DNI: dni,
         Usuario: usu,
         Contraseña: pass
-        Contraseña: pass
     });
 });
 
 btnLogin.addEventListener('click', function(txtDNIUsuario) {
-    var dni = txtUsuario.value;
-    var pass = txtContraseña.value;
-    var consulta1 = firebase.database().ref("Usuarios/").limitToFirst(1234);
-    var consulta2 = firebase.database().ref('Usuarios/').limitToLast(1234);
+    var email = txtUsuario.value;
+    var password = txtContraseña.value;
+    registro.createUserWithEmailAndPassword(email, password).catch(function(error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
 
-    consulta2.database().ref('Usuarios/' + dni + '/App').on('value', function(snapshot) {
+    });
+});
+    
+function cambioTraje(){
+//    var fotaca=document.getElementById('muestra1').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1a.jpg?alt=media&token=03405e64-24a8-4a69-b2c7-3b85e2665bd8";
+    var fotaca=document.getElementById('muestra1');
+   fotaca.style.backgroundImage="url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1a.jpg?alt=media&token=03405e64-24a8-4a69-b2c7-3b85e2665bd8)";
+}   
+    
+    ref.on('value', function(snapshot) {
         console.log(snapshot.val());
     });
-
-});
-
-ref.on('value', function(snapshot) {
-    console.log(snapshot.val());
-});
 
 </script>
 </body>

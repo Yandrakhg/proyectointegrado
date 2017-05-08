@@ -7,18 +7,26 @@
     padding: 20px;
 }
 .tituloLetra{
+    margin-left: 5%;
     text-transform: uppercase;
     margin-bottom: .5em;
     color: #3e3e3e;
     clear: both; 
 }
 .nombreLetra{
+    margin-left: 5%;
     line-height: 1.1;
     font-size: 1;
     color: #757676;
     clear: both;
 }
-
+.contenidoTextArea{
+    line-height: 1.1;
+    font-size: 1;
+    color: #757676;
+    clear: both;
+    text-align:justify;
+}
 .margenMenu{
     padding-right: 5px;
 	padding-left: 5px;
@@ -32,15 +40,17 @@
     margin: 10px;
 }
 .tamañoDialog {
-    width: 80%;
+    width: 75%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5px;
     border-radius: 15px;
     background-color: #EDEDED;
 }
 .cajaDocumentacion{
-  width: 90%;
-  border: 1px solid black;
+  margin-top: 5px;
+  background-color: #E5E5E5;
+  width: 80%;
+  vertical-align: middle;
   margin-left: 5%;
 }
 .descriptionTextArea {
@@ -48,9 +58,9 @@
 }
 .modalContenido{
     
-    height: 70%;
+    height: 20%;
     margin: auto;
-    position: relative;
+    position:E5E5E5 relative;
 	background-color: #fff;
 	-webkit-background-clip: padding-box;
 	background-clip: padding-box;
@@ -63,4 +73,11 @@
 }
 .imagen{
     vertical-align: middle;
+    transition: opacity 0.5s ease-in-out;
+}
+.imagen:hover {
+    opacity: 0.5;
+}
+#pTraje:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1a.jpg?alt=media&token=03405e64-24a8-4a69-b2c7-3b85e2665bd8);
 }
