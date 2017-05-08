@@ -1,0 +1,104 @@
+.margenes{
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10px;
+}
+.tamañoDialog {
+    width: 900px;
+	margin-top: 30px;
+    margin: auto;
+    padding: 25px;
+}
+
+.textarea{
+    width:370px;
+    height:400px;
+    border: 1px dotted #000099;
+   
+
+}
+.carousel-inner{
+   background: #D8D8D8; 
+    
+    
+}
+.textField{
+    width: 100%;
+}
+.divColeccion{
+    background-color: #5B5B5B;
+    width: 100%;
+    padding: 20px;
+}
+.tituloLetra{
+    text-transform: uppercase;
+    margin-bottom: .5em;
+    color: #3e3e3e;
+    clear: both; 
+}
+.nombreLetra{
+    line-height: 1.1;
+    font-size: 1;
+    color: #757676;
+    clear: both;
+}
+
+.margenMenu{
+    padding-right: 5px;
+	padding-left: 5px;
+	width: 90%;
+}
+.margenes{
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 10px;
+}
+.tamañoDialog {
+    width: 80%;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 15px;
+    background-color: #EDEDED;
+}
+.cajaDocumentacion{
+  width: 90%;
+  border: 1px solid black;
+  margin-left: 5%;
+}
+.descriptionTextArea {
+    padding: .5em;
+}
+.modalContenido{
+    
+    height: 70%;
+    margin: auto;
+    position: relative;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border: 1px solid #999;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: 15px;
+	outline: 0;
+	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	box-shadow: 0 3px 9px rgba(0,0,0,.5)
+}
+.imagen{
+    vertical-align: middle;
+}
+.contenedorPie {
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #5B5B5B;
+    
+}
+.letraFooter{
+    color:white;
+    
+}
