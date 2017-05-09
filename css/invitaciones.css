@@ -13,6 +13,9 @@
     color: #3e3e3e;
     clear: both; 
 }
+.carousel-inner{
+   background: #D8D8D8;    
+}
 .nombreLetra{
     margin-left: 5%;
     line-height: 1.1;
@@ -75,7 +78,12 @@
     vertical-align: middle;
     transition: opacity 0.5s ease-in-out;
 }
-
+.imagen:hover {
+    opacity: 0.5;
+}
+.letraFooter{
+    color:white;  
+}
 #pTraje:hover{
     content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1a.jpg?alt=media&token=03405e64-24a8-4a69-b2c7-3b85e2665bd8);
 }
