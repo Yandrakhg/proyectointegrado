@@ -81,6 +81,14 @@
 .imagen:hover {
     opacity: 0.5;
 }
+.contenedorPie {
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  background: #5B5B5B;
+    
+}
 .letraFooter{
     color:white;  
 }
