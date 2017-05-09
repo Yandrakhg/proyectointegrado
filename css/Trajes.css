@@ -1,38 +1,19 @@
-.margenes{
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 10px;
-}
-.tamañoDialog {
-    width: 900px;
-	margin-top: 30px;
-    margin: auto;
-    padding: 25px;
-}
-
-.textarea{
-    width:370px;
-    height:400px;
-    border: 1px dotted #000099;
-   
-
-}
 .carousel-inner{
-   background: #D8D8D8; 
-    
+   background: #D8D8D8;  
     
 }
+
 .textField{
     width: 100%;
 }
+
 .divColeccion{
     background-color: #5B5B5B;
     width: 100%;
     padding: 20px;
 }
 .tituloLetra{
+    margin-left: 5%;
     text-transform: uppercase;
     margin-bottom: .5em;
     color: #3e3e3e;
@@ -43,6 +24,13 @@
     font-size: 1;
     color: #757676;
     clear: both;
+}
+.contenidoTextArea{
+    line-height: 1.1;
+    font-size: 1;
+    color: #757676;
+    clear: both;
+    text-align:justify;
 }
 
 .margenMenu{
@@ -58,15 +46,17 @@
     margin: 10px;
 }
 .tamañoDialog {
-    width: 80%;
+    width: 75%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5px;
     border-radius: 15px;
     background-color: #EDEDED;
 }
 .cajaDocumentacion{
-  width: 90%;
-  border: 1px solid black;
+  margin-top: 5px;
+  background-color: #E5E5E5;
+  width: 80%;
+  vertical-align: middle;
   margin-left: 5%;
 }
 .descriptionTextArea {
@@ -89,6 +79,7 @@
 }
 .imagen{
     vertical-align: middle;
+    transition: opacity 0.5s ease-in-out;
 }
 .contenedorPie {
   padding-right: 5px;
@@ -102,3 +93,33 @@
     color:white;
     
 }
+
+#pTraje1:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustinb.jpg?alt=media&token=b1e8ea6f-ec71-46e8-ac20-9142e539aab0);
+}
+#pTraje2:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fazulb.jpg?alt=media&token=5bbfeb77-a9ec-427e-a691-8ae0a0c9be9a);
+}
+#pTraje3:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Feasy2.jpg?alt=media&token=140da5d0-40e7-4168-b6da-dc97be4baa58);
+}
+
+#pTraje4:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio2.jpg?alt=media&token=88362d38-43e2-4784-8bb9-78ea546c765a);
+}
+
+#pTraje5:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal2.jpg?alt=media&token=add135b9-f305-4d74-beac-638fe94a9a18);
+}
+
+#pTraje6:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto2.jpg?alt=media&token=d8785205-baf1-45ff-bec8-df021828cca7);
+}
+
+#pTraje7:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula2.jpg?alt=media&token=5d7a7ff4-5961-4bd1-90c2-b40658c0a670);
+}
+#pTraje8:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy2.jpg?alt=media&token=fbad0251-40c8-4f92-a107-640b4115ff40);
+}
+*/
