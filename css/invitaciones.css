@@ -1,10 +1,20 @@
 .textField{
     width: 100%;
 }
+.menu{
+    width: 97%;
+    margin: auto;
+}
 .divColeccion{
     background-color: #5B5B5B;
     width: 100%;
-    padding: 20px;
+    font-weight: bold;
+    font-family:serif;
+    padding: 15px;
+    margin-bottom: .5em;
+    color: #FFFFFF;
+    clear: both; 
+    text-align: center;
 }
 .tituloLetra{
     margin-left: 5%;
@@ -15,6 +25,8 @@
 }
 .carousel-inner{
    background: #D8D8D8;    
+    width: 516px;
+    height: 640px;
 }
 .nombreLetra{
     margin-left: 5%;
@@ -93,5 +105,30 @@
     color:white;  
 }
 #pTraje:hover{
-    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin1a.jpg?alt=media&token=03405e64-24a8-4a69-b2c7-3b85e2665bd8);
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FdustinEspaldaG.jpg?alt=media&token=2beb5009-faaa-4f38-99cc-976dce565118);
+}
+#pTraje2:hover{
+    content: url( https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FPalEspaldaG.jpg?alt=media&token=4249bf38-14dd-4ea8-97a7-377128695620);
+}
+#pTraje3:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FRobertoEspaldaG.jpg?alt=media&token=5d3b7eb6-b4f4-4ecc-ae45-eec0bc6ccae6);
+}
+
+#pTraje4:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FformulaEspaldaG.jpg?alt=media&token=7de2b7f8-8643-4b4f-b9bd-ea42138b8a7c); 
+}
+
+#pTraje5:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FTommyEspaldaG.jpg?alt=media&token=a6175fb3-ef2e-46d9-8c6d-85e75d050c80);
+}
+
+#pTraje6:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FeasyEspaldaG.jpg?alt=media&token=94d6c41b-ccfa-4379-a8d2-227a41c76291); 
+}
+
+#pTraje7:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FEmilioEspaldaG.jpg?alt=media&token=49b4d205-cdf7-4e01-97f3-74bd2599b1b4); 
+}
+#pTraje8:hover{
+    content: url(https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FDustin%20EspaldaG.jpg?alt=media&token=de95dfb4-4b6a-4def-8650-133acc85628a);
 }
