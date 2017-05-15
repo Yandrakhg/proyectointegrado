@@ -25,28 +25,6 @@
     font-weight: bold;
     margin: auto;
 }
-.cajaCabecera{
-    background: #D4D4D4;
-    color: #fff;
-    padding: 5px;
-    margin: auto;
-    text-align: center;
-}
-.cajaPie{
-    background: #D4D4D4;
-    color: #fff;
-    padding: 5px;
-    margin: auto;
-    text-align: center;
-}
-.cajaCuerpo{
-    padding: 5px;
-    margin: auto;
-}
-div.cajaCuerpo>div{
-    border-style: solid;
-    border-color: #D4D4D4;
-}
 .botonFavorito{
     width: 10%;
     height: auto;
@@ -87,8 +65,8 @@ div.cajaCuerpo>div{
 }
 .carousel-inner{
    background: #D8D8D8;    
-   width: 100%;
-   height: 100%;
+    width: 516px;
+    height: 640px;
 }
 .nombreLetra{
     margin-left: 5%;
@@ -127,12 +105,14 @@ div.cajaCuerpo>div{
   background-color: #fff;
   width: 100%;
   margin-top: 0px;
-  margin: auto;
+  vertical-align: middle;
+  margin-left: 5%;
 }
 .cajaDocumentacion2{
   width: 100%;
   margin-top: 5px;
   vertical-align: middle;
+  margin-left: 5%;
 }
 .descriptionTextArea {
     padding: .5em;
@@ -152,6 +132,13 @@ div.cajaCuerpo>div{
 	-webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
 	box-shadow: 0 3px 9px rgba(0,0,0,.5)
 }
+.imagen{
+    vertical-align: middle;
+    transition: opacity 0.5s ease-in-out;
+}
+.imagen:hover {
+    opacity: 0.5;
+}
 .contenedorPie {
   padding-right: 5px;
   padding-left: 5px;
@@ -159,20 +146,6 @@ div.cajaCuerpo>div{
   margin-left: auto;
   background: #282828;
     
-}
-tr{
-    border: 1px solid;
-    border-color: #D4D4D4;
-    height: 70px;
-}
-td{
-    margin: auto;
-    border: none;
-    padding: 10px;
-    font-size: 11px;
-}
-table{
-    width: 100%;
 }
 .letraFooter{
     color:white;  
