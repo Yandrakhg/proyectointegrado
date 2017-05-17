@@ -2,26 +2,28 @@
 <html lang="en">
 
 <head>
-	<title>Bootstrap Example</title>
+	<title>T.T</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--CSS boostrap-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-	<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
-	<script src="js/database.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-
 	<!-- Custom CSS -->
 	<link href="css/stylish-portfolio.css" rel="stylesheet">
 	<link href="css/RopaHombre.css" rel="stylesheet">
+	<!-- Scripts -->
+	<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/database.js"></script>
+
+
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 
 <body>
-	<span id="idpag" class="2" > </span>
+	<span id="idpage" class="2"> </span>
 	<div class="mainmenu-area">
 		<div class="menu">
 			<div class="row">
@@ -39,16 +41,16 @@
 									<div class="col-lg-10 col-lg-offset-1 text-center">
 										<div class='row'>
 											<div class="col-md-4">
-												<div class="portfolio-item ">Usuario:</div>
+												<div class="portfolio-item ">Email:</div>
 											</div>
 											<div class="col-md-8">
-												<div class="portfolio-item"><input type="text" class='textField' id="txtUsuario"></div>
+												<div class="portfolio-item"><input placeholder="Email:" type="text" class='textField' id="email"></div>
 											</div>
 											<div class="col-md-4">
 												<div class="portfolio-item ">Contraseña:</div>
 											</div>
 											<div class="col-md-8">
-												<div class="portfolio-item"><input type="text" class='textField' id="txtContraseña"></div>
+												<div class="portfolio-item"><input placeholder="Contraseña:" type="password" class='textField' id="pass"></div>
 											</div>
 										</div>
 									</div>
@@ -56,7 +58,7 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								<button type="button" id="btnLogin" class="btn btn-default">Aceptar</button>
+								<button type="button" id="btnLogin2" class="btn btn-default">Aceptar</button>
 							</div>
 						</div>
 					</div>
@@ -927,8 +929,11 @@
 		<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> </footer>
 	<!-- Footer -->
 
-	<script src="js/controlador.js"></script>
+
+
+	<script src="js/modelo.js"></script>
 	<script src="js/modeloPersona.js"></script>
+	<script src="js/controlador.js"></script>
 
 </body>
 

@@ -1,6 +1,4 @@
-var newPersona;
-const AUTH= firebase.auth();
-const ref = firebase.database();
+const REF = firebase.database();
     
 function crearPersona(user){
     var usuario= REF.ref('Usuarios');
@@ -8,7 +6,7 @@ function crearPersona(user){
 }
     
 function insertarPersona(newPersona, uid){
-    newPersona.id:uid;
+    newPersona.id= uid;
     crearPersona(newPersona)
 }
 

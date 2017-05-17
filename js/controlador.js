@@ -20,14 +20,14 @@ window.onload = function () {
 			//BOTONES
 
 			//boton iniciarSesion
-			docuemnt.getElementById("").addEventListener('click', login);
+			document.getElementById("").addEventListener('click', login);
 			//boton Registrar
 			document.getElementById("").addEventListener('click', registrar);
 			break;
 
 		case 2:
 			
-			docuemnt.getElementById("btnLogin").addEventListener('click',login);
+			document.getElementById("btnLogin2").addEventListener('click',login);
 			break;
 	}
 
@@ -52,32 +52,6 @@ function registrar() {
 
 	registrarPersona(1, 2, 3);
 }
-
-btnRegistro.addEventListener('click', function () {
-	var nombre = txtNombreUsuario.value;
-	var apellidos = txtApellidosUsuario.value;
-	var dir = txtDireccionUsuario.value;
-	var usu = txtUsuarioR.value;
-	var pass = txtContraseñaR.value;
-
-	firebase.database().ref('Usuarios').push({
-		Nombre: nombre,
-		Apellidos: apellidos,
-		Direccion: dir,
-		DNI: dni,
-		Usuario: usu,
-		Contraseña: pass
-	});
-});
-
-btnLogin.addEventListener('click', function (txtDNIUsuario) {
-	var email = txtUsuario.value;
-	var password = txtContraseña.value;
-	registro.createUserWithEmailAndPassword(email, password).catch(function (error) {
-		var errorCode = error.code;
-		var errorMessage = error.message;
-	});
-});
 
 //ref.on('value', function(snapshot) {
 //console.log(snapshot.val());
