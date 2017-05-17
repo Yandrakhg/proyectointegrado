@@ -5,15 +5,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
-    <link href="css/invitaciones.css" rel="stylesheet">
+  
+	<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+  	<script src="js/database.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	
+  <!-- Custom CSS -->
+  <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <link href="css/invitaciones.css" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
 <!-- Bootstrap -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
 <body>
+<span id="idpage" class="3"></span>
 <div class="mainmenu-area">
 <div class="menu">
     <div class="row">
@@ -147,7 +153,7 @@
          <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Proveedores<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li ><a href="#">Fotógrafo</a></li>
+            <li><a href="#">Fotógrafo</a></li>
             <li><a href="#">Vehículos</a></li>
             <li><a href="#">Viajes</a></li>
             <li><a href="#">Flores</a></li>
@@ -236,51 +242,11 @@
         <div class="col-lg-10 col-lg-offset-1 text-center">
             <hr class="small">
             <div class="row">
-            
-                        <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje" alt=""></a>
                     </div>
-                        <!-- /.col-lg-10 -->
-             
-                
+                </div>
         <!-- Modal 1-->
         <div class="modal fade" id="myModalTraje1" role="dialog">
             <div class="tamañoDialog">
@@ -289,8 +255,8 @@
                         <div class="row" >
                             <div class="margenes col-lg-offset-1" >
                                 <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinP.jpg?alt=media&token=72dd9a8e-bcad-4c5c-be21-652f50ab55d3" id="pImg1">
+                                    <div class="col-md-5 fot">
+                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pImg1">
                                     </div>
                                     <div class="col-md-6 cajaDocumentacion">
                                         <div class='cajaCabecera'>Información sobre Comotinta</div>
@@ -319,12 +285,12 @@
                                             </table>
                                         </div>
                                    </div>
+									<div class="col-md-5 cajaDocumentacion2">
+                                               
+                                   </div>
                                     <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
                                             <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
+                                            <button class='botonFavorito'>Fav</button>      
                                    </div>
                            </div><!-- row-->
                         </div><!-- márgenes-->
@@ -359,48 +325,12 @@
         </div><!--modalFade-->
         <!-- EndModal -->
         
-                <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje2"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje2"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje2"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje2"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje2"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje2" alt=""></a>
                     </div>
-                
+                </div>
+
                   <!-- Modal2 -->
         <div class="modal fade" id="myModalTraje2" role="dialog">
             <div class="tamañoDialog">
@@ -439,12 +369,12 @@
                                             </table>
                                         </div>
                                    </div>
+                                    <div class="col-md-5 cajaDocumentacion2">
+                                               
+                                   </div>
                                     <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
                                             <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
+                                            <button class='botonFavorito'>Fav</button>      
                                    </div>
                            </div><!-- row-->
                         </div><!-- márgenes-->
@@ -478,49 +408,11 @@
             </div><!--modalTamaño-->
         </div><!--modalFade-->
         <!-- EndModal -->
-                
-                <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje3"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje3"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje3"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje3"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje3"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje3" alt=""></a>
                     </div>
-                
+                </div>
         <!-- Modal -->
         <div class="modal fade" id="myModalTraje3" role="dialog">
             <div class="tamañoDialog">
@@ -559,12 +451,12 @@
                                             </table>
                                         </div>
                                    </div>
+                                    <div class="col-md-5 cajaDocumentacion2">
+                                               
+                                   </div>
                                     <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
                                             <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
+                                            <button class='botonFavorito'>Fav</button>      
                                    </div>
                            </div><!-- row-->
                         </div><!-- márgenes-->
@@ -599,47 +491,11 @@
         </div><!--modalFade-->
         <!-- EndModal -->
                 
-                <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje4"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje4"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje4"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje4"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje4"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje4" alt=""></a>
                     </div>
+                </div>
                 <div class="modal fade" id="myModalTraje4" role="dialog">
             <div class="tamañoDialog">
                 <div class="modalContenido">
@@ -677,12 +533,12 @@
                                             </table>
                                         </div>
                                    </div>
+                                    <div class="col-md-5 cajaDocumentacion2">
+                                               
+                                   </div>
                                     <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
                                             <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
+                                            <button class='botonFavorito'>Fav</button>      
                                    </div>
                            </div><!-- row-->
                         </div><!-- márgenes-->
@@ -717,48 +573,11 @@
         </div><!--modalFade-->
         <!-- EndModal -->
                 
-                <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje5"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje5"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje5"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje5"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje5"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje5" alt=""></a>
                     </div>
-                
+                </div>
         <!-- Modal 5-->
         <div class="modal fade" id="myModalTraje5" role="dialog">
             <div class="tamañoDialog">
@@ -797,12 +616,12 @@
                                             </table>
                                         </div>
                                    </div>
+                                    <div class="col-md-5 cajaDocumentacion2">
+                                               
+                                   </div>
                                     <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
                                             <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
+                                            <button class='botonFavorito'>Fav</button>      
                                    </div>
                            </div><!-- row-->
                         </div><!-- márgenes-->
@@ -837,47 +656,11 @@
         </div><!--modalFade-->
         <!-- EndModal -->
                
-                <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje6"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje6"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje6"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje6"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje6"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje6" alt=""></a>
                     </div>
+                </div>
               <!-- Modal 6-->
         <div class="modal fade" id="myModalTraje6" role="dialog">
             <div class="tamañoDialog">
@@ -955,49 +738,11 @@
             </div><!--modalTamaño-->
         </div><!--modalFade-->
         <!-- EndModal -->
-                
-                <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje7"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje7"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje7"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje7"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje7"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje7" alt=""></a>
                     </div>
-                
+                </div>
                  <!-- Modal 7-->
         <div class="modal fade" id="myModalTraje7" role="dialog">
             <div class="tamañoDialog">
@@ -1010,22 +755,38 @@
                                             <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db" id="pImg7">
                                     </div>
                                     <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
+                                        <div class='cajaCabecera'>Información sobre Comotinta</div>
+                                        <div class='cajaCuerpo'>
+                                            <table border="1">
+                                                <tr>
+                                                    <td colspan="1">Precio</td>
+                                                    <td colspan="3">Desde 1,50€ hasta 2€</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Antelación</td>
+                                                    <td colspan="3">6 - 7 días</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Plazo de entrega</td>
+                                                    <td colspan="3">En el plazo máximo de 7 días laborables</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Envíos nacionales</td>
+                                                    <td colspan="3">Sí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Da servicio en</td>
+                                                    <td colspan="3">A Coruña, Barcelona, Granada, Madrid, Málaga, Sevilla, Tarragona, Valencia y Zaragoza</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                   </div>
+                                    <div class="col-md-5 cajaDocumentacion2">
+                                               
                                    </div>
                                     <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
                                             <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
+                                            <button class='botonFavorito'>Fav</button>      
                                    </div>
                            </div><!-- row-->
                         </div><!-- márgenes-->
@@ -1037,11 +798,11 @@
                                 <div class='row'>
                                     <div class="col-md-2">
                                         <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FemidioP.jpg?alt=media&token=54f1889e-0338-4431-95c8-57827fa5d604" id='pImg7a' onclick="cambioTraje('pImg7a');" alt=""></a></div>
+                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id='pImg7a' onclick="cambioTraje('pImg7a');" alt=""></a></div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio2.jpg?alt=media&token=88362d38-43e2-4784-8bb9-78ea546c765a" id='pImg7b' onclick="cambioTraje('pImg7b');" alt=""></div>
+                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id='pImg7b' onclick="cambioTraje('pImg7b');" alt=""></div>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="portfolio-item">
@@ -1059,48 +820,11 @@
             </div><!--modalTamaño-->
         </div><!--modalFade-->
         <!-- EndModal -->
-                
-                <div class="col-md-3 col-sm-6 text-center">
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                </ol>
-
-                                <!-- Wrapper for slides -->
-                                <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje8"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje8"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv2.jpg?alt=media&token=a15d63b2-be59-44c5-be19-489f6b5cd4d3" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje8"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv5.jpg?alt=media&token=cf0632c0-a04a-4bb0-a7fd-6c8c3f41fd2b" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                    <div class="item">
-                                        <a href="#" data-toggle="modal" data-target="#myModalTraje8"><img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv4.jpg?alt=media&token=3b607465-1e7d-445c-976e-528d505a78a8" style = "margin:0 auto" alt=""></a>
-                                    </div>
-
-                                </div>
-
-                                <!-- Left and right controls -->
-                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                        </div><!-- /.carousel slide -->
+                <div class="col-md-4 col-sm-6">
+                    <div class="portfolio-item">
+                        <a href="#" data-toggle="modal" data-target="#myModalTraje8"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Invitaciones%2FimgInv1.jpg?alt=media&token=4b91607f-2122-42fd-b478-55f05cae3bf7" id="pTraje8" alt=""></a>
                     </div>
+                </div>
                 <!-- Modal 8-->
         <div class="modal fade" id="myModalTraje8" role="dialog">
             <div class="tamañoDialog">
@@ -1113,14 +837,38 @@
                                             <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Fprueba.jpg?alt=media&token=909c4df4-741c-4d01-b591-4ef881738998" id="pImg8">
                                     </div>
                                     <div class="col-md-6 cajaDocumentacion">
-                                        
+                                        <div class='cajaCabecera'>Información sobre Comotinta</div>
+                                        <div class='cajaCuerpo'>
+                                            <table border="1">
+                                                <tr>
+                                                    <td colspan="1">Precio</td>
+                                                    <td colspan="3">Desde 1,50€ hasta 2€</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Antelación</td>
+                                                    <td colspan="3">6 - 7 días</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Plazo de entrega</td>
+                                                    <td colspan="3">En el plazo máximo de 7 días laborables</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Envíos nacionales</td>
+                                                    <td colspan="3">Sí</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="1">Da servicio en</td>
+                                                    <td colspan="3">A Coruña, Barcelona, Granada, Madrid, Málaga, Sevilla, Tarragona, Valencia y Zaragoza</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                   </div>
+                                    <div class="col-md-5 cajaDocumentacion2">
+                                               
                                    </div>
                                     <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
                                             <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
+                                            <button class='botonFavorito'>Fav</button>      
                                    </div>
                            </div><!-- row-->
                         </div><!-- márgenes-->
@@ -1181,168 +929,9 @@
         </div>
     </div>
     <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> </footer><!-- Footer -->
-<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
-<script>
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyC0U8qHK8KHlaYIjp8M2SYvhsIfwa17dfI",
-    authDomain: "proyectoeventos-53630.firebaseapp.com",
-    databaseURL: "https://proyectoeventos-53630.firebaseio.com",
-    projectId: "proyectoeventos-53630",
-    storageBucket: "proyectoeventos-53630.appspot.com",
-    messagingSenderId: "466522661750"
-};
 
-firebase.initializeApp(config);
-    var dialog = document.getElementsByTagName("dialog");
-    var txtUsuario = document.getElementById('txtUsuario');
-    var txtContraseña = document.getElementById('txtContraseña');
-    var txtUsuarioR = document.getElementById('txtUsuarioR');
-    var txtContraseñaR = document.getElementById('txtContraseñaR');
-    var txtNombreUsuario = document.getElementById('txtNombreUsuario');
-    var txtApellidosUsuario = document.getElementById('txtApellidosUsuario');
-    var txtDireccionUsuario = document.getElementById('txtDireccionUsuario');
-    var txtDNIUsuario = document.getElementById('txtDNIUsuario');
-    var btnLogin = document.getElementById('btnLogin');
-    var btnRegistro = document.getElementById('btnRegistro');
-    var registro= firebase.auth();
-/*var usu =document.getElementById("ahinojosa");*/
-    var ref = firebase.database().ref('Usuarios');
-//	  var refi = ref.child(txtDNIUsuario);
+    <script src="js/controlador.js"></script>
+	<script src="js/modeloPersona.js"></script>
 
-btnRegistro.addEventListener('click', function() {
-    var nombre = txtNombreUsuario.value;
-    var apellidos = txtApellidosUsuario.value;
-    var dni = txtDNIUsuario.value;
-    var dir = txtDireccionUsuario.value;
-    var usu = txtUsuarioR.value;
-    var pass = txtContraseñaR.value;
-    firebase.database().ref('Usuarios/' + dni).set({
-        Nombre: nombre,
-        Apellidos: apellidos,
-        Direccion: dir,
-        DNI: dni,
-        Usuario: usu,
-        Contraseña: pass
-    });
-});
-
-btnLogin.addEventListener('click', function(txtDNIUsuario) {
-    var email = txtUsuario.value;
-    var password = txtContraseña.value;
-    registro.createUserWithEmailAndPassword(email, password).catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
-
-    });
-});
-    
-function cambioTraje(img){
-	// Accion por defecto para Buttons;
-	switch(img){
-	   case "pImg1a":
-                      var foto1a=document.getElementById('pImg1').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinP.jpg?alt=media&token=72dd9a8e-bcad-4c5c-be21-652f50ab55d3";    
-                      break;
-	   case "pImg1b":
-                      var foto1b=document.getElementById('pImg1').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDusstinCuerpoG.jpg?alt=media&token=d12592bb-021a-48fe-b4df-8b3706f875cd";
-                      break;
-	   case "pImg1c":
-                      var foto1c=document.getElementById('pImg1').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinFrenteG.jpg?alt=media&token=de1bf4fe-565c-438f-a1f0-fb0f20fadb09";
-                      break;
-       case "pImg1d":
-                      var foto1c=document.getElementById('pImg1').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FdustinEspaldaG.jpg?alt=media&token=c972cd88-ba3c-417d-8f8f-4324fa4efaf5";
-                      break;
-       case "pImg2a":
-                      var foto2a=document.getElementById('pImg2').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalP.jpg?alt=media&token=91a1dc82-178e-4c00-8d1b-caa18dbf7f46";    
-                      break;
-	   case "pImg2b":
-                      var foto2b=document.getElementById('pImg2').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalEspaldaG.jpg?alt=media&token=e6cc5a36-39fe-4626-b40f-433cf6cb165f";
-                      break;
-	   case "pImg2c":
-                      var foto2c=document.getElementById('pImg2').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalPantalonesFG.jpg?alt=media&token=9f88e83d-2c84-401f-adfa-bedb296a4fab";
-                      break;
-       case "pImg2d":
-                      var foto2c=document.getElementById('pImg2').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalPantalonesEG.jpg?alt=media&token=818aeffb-3ceb-4947-918f-614405b34f63";
-                      break;
-       case "pImg3a":
-                      var foto3a=document.getElementById('pImg3').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoP.jpg?alt=media&token=771941e4-231f-4844-a0bd-0ce49b9fb1c9";    
-                      break;
-	   case "pImg3b":
-                      var foto3b=document.getElementById('pImg3').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoEspaldaG.jpg?alt=media&token=a732589d-15fb-4e95-8796-532cd4730b21";
-                      break;
-	   case "pImg3c":
-                      var foto3c=document.getElementById('pImg3').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoPantalonesFG.jpg?alt=media&token=dcd4b48f-ec0a-4b17-a855-0490142b0a85";
-                      break;
-       case "pImg3d":
-                      var foto3c=document.getElementById('pImg3').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoPantalonTG.jpg?alt=media&token=8bad6cdb-0271-4973-a6aa-6c127cb38ee3";
-                      break;
-       case "pImg4a":
-                      var foto4a=document.getElementById('pImg4').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FFormulaP.jpg?alt=media&token=47cd937a-4068-4dd8-ba3b-b038a55ddb43";    
-                      break;
-	   case "pImg4b":
-                      var foto4b=document.getElementById('pImg4').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FformulaEspaldaG.jpg?alt=media&token=ffac9f64-1b77-421b-8c73-e6bffa7cc8fa";
-                      break;
-	   case "pImg4c":
-                      var foto4c=document.getElementById('pImg4').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FformulaFrontalG.jpg?alt=media&token=98ba7f9d-cb64-4ff7-91f7-26e15c2939bb";
-                      break;
-       case "pImg4d":
-                      var foto4c=document.getElementById('pImg4').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FformulaCuerpoG.jpg?alt=media&token=9037747e-6a01-4b1e-9ff1-253f07f2d00a";
-                      break;
-       case "pImg5a":
-                      var foto5a=document.getElementById('pImg5').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyP.jpg?alt=media&token=8b6bdff3-c43d-406d-af3b-c2fe796acae2";    
-                      break;
-	   case "pImg5b":
-                      var foto5b=document.getElementById('pImg5').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyEspaldaG.jpg?alt=media&token=7a5c63c5-2c9c-404b-a33a-9684c096c85f";
-                      break;
-	   case "pImg5c":
-                      var foto5c=document.getElementById('pImg5').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyFrontalG.jpg?alt=media&token=1c9802ca-6ceb-4018-82fd-4e2aa3f1585e";
-                      break;
-       case "pImg5d":
-                      var foto5c=document.getElementById('pImg5').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyCuerpoG.jpg?alt=media&token=38c821da-b0d2-4f29-9446-d4c028a6306a";
-                      break;
-       case "pImg6a":
-                      var foto6a=document.getElementById('pImg6').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyP.jpg?alt=media&token=61c35384-2822-4a56-8849-ce7f513f811e";    
-                      break;
-	   case "pImg6b":
-                      var foto6b=document.getElementById('pImg6').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyEspaldaG.jpg?alt=media&token=251ad3ca-e573-4227-9728-0a85917a1187";
-                      break;
-	   case "pImg6c":
-                      var foto6c=document.getElementById('pImg6').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyCuerpoG.jpg?alt=media&token=e6fcae8b-1b91-4c51-8b9b-71d04b9cef6f";
-                      break;
-       case "pImg6d":
-                      var foto6c=document.getElementById('pImg6').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyFrontalG.jpg?alt=media&token=84f6e08d-25fe-4b95-b7f8-44f83cb979eb";
-                      break;
-       case "pImg7a":
-                      var foto7a=document.getElementById('pImg7').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db";    
-                      break;
-	   case "pImg7b":
-                      var foto7b=document.getElementById('pImg7').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioEspaldaG.jpg?alt=media&token=13e8a447-1918-4b35-980c-fc5e293cf35b";
-                      break;
-	   case "pImg7c":
-                      var foto7c=document.getElementById('pImg7').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmillioPantalonesG.jpg?alt=media&token=611f7cef-571f-4bd0-b11f-957435a69838";
-                      break;
-      case "pImg7d":
-                      var foto7c=document.getElementById('pImg7').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioPantalonesTG.jpg?alt=media&token=8470c1f7-7b0b-4ee3-bad1-6854565b18ad";
-                      break;              
-       case "pImg8a":
-                      var foto8a=document.getElementById('pImg8').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Fprueba.jpg?alt=media&token=909c4df4-741c-4d01-b591-4ef881738998";    
-                      break;
-	   case "pImg8b":
-                      var foto8b=document.getElementById('pImg8').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustin%20EspaldaG.jpg?alt=media&token=7b476361-5f0d-46c9-8d59-0dc0a5782818";
-                      break;
-	   case "pImg8c":
-                      var foto8c=document.getElementById('pImg8').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinPantalonG.jpg?alt=media&token=ffcc1d91-1b1f-482f-bc0e-e32ebeb6d59f";
-                      break;
-       case "pImg8d":
-                      var foto8c=document.getElementById('pImg8').src= "https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinPantalonEG.jpg?alt=media&token=0d6c63ba-24e3-4da3-ab1b-deaf5be638d1";
-                      break;
-    }
-    
-}
-    ref.on('value', function(snapshot) {
-        console.log(snapshot.val());
-    });
-
-</script>
 </body>
 </html>

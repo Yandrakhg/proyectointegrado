@@ -1,815 +1,935 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
+
+<head>
+	<title>Bootstrap Example</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 	<script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
-  	<script src="js/database.js"></script>
+	<script src="js/database.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	
-  <!-- Custom CSS -->
-  <link href="css/stylish-portfolio.css" rel="stylesheet">
-  <link href="css/RopaHombre.css" rel="stylesheet">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-<!-- Bootstrap -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Custom CSS -->
+	<link href="css/stylish-portfolio.css" rel="stylesheet">
+	<link href="css/RopaHombre.css" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
+
 <body>
-<div class="mainmenu-area">
-<div class="menu">
-    <div class="row">
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Login</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-10 col-lg-offset-1 text-center">
-                                <div class='row'>
-                                    <div class="col-md-4">
-                                        <div class="portfolio-item ">Usuario:</div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtUsuario"></div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="portfolio-item ">Contraseña:</div>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtContraseña"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" id="btnLogin" class="btn btn-default">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="myModal2" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Registro</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="row">
-                            <div class="col-lg-10 col-lg-offset-1 text-center">
-                                <div class='row'>
-                                    <div class="col-md-3">
-                                        <div class="portfolio-item ">Nombre:</div>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtNombreUsuario"></div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="portfolio-item ">Apellidos:</div>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtApellidosUsuario"></div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="portfolio-item ">DNI: </div>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtDNIUsuario"></div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="portfolio-item ">Dirección:</div>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtDireccionUsuario"></div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="portfolio-item ">Usuario:</div>
-                                    </div>
+	<span id="idpag" class="2" > </span>
+	<div class="mainmenu-area">
+		<div class="menu">
+			<div class="row">
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Login</h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-lg-10 col-lg-offset-1 text-center">
+										<div class='row'>
+											<div class="col-md-4">
+												<div class="portfolio-item ">Usuario:</div>
+											</div>
+											<div class="col-md-8">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtUsuario"></div>
+											</div>
+											<div class="col-md-4">
+												<div class="portfolio-item ">Contraseña:</div>
+											</div>
+											<div class="col-md-8">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtContraseña"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" id="btnLogin" class="btn btn-default">Aceptar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal -->
+				<div class="modal fade" id="myModal2" role="dialog">
+					<div class="modal-dialog">
+						<!-- Modal content-->
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Registro</h4>
+							</div>
+							<div class="modal-body">
+								<div class="row">
+									<div class="col-lg-10 col-lg-offset-1 text-center">
+										<div class='row'>
+											<div class="col-md-3">
+												<div class="portfolio-item ">Nombre:</div>
+											</div>
+											<div class="col-md-9">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtNombreUsuario"></div>
+											</div>
+											<div class="col-md-3">
+												<div class="portfolio-item ">Apellidos:</div>
+											</div>
+											<div class="col-md-9">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtApellidosUsuario"></div>
+											</div>
+											<div class="col-md-3">
+												<div class="portfolio-item ">DNI: </div>
+											</div>
+											<div class="col-md-9">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtDNIUsuario"></div>
+											</div>
+											<div class="col-md-3">
+												<div class="portfolio-item ">Dirección:</div>
+											</div>
+											<div class="col-md-9">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtDireccionUsuario"></div>
+											</div>
+											<div class="col-md-3">
+												<div class="portfolio-item ">Usuario:</div>
+											</div>
 
-                                    <div class="col-md-9">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtUsuarioR"></div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="portfolio-item ">Contraseña:</div>
-                                    </div>
-                                    <div class="col-md-9">
-                                        <div class="portfolio-item"><input type="text" class='textField' id="txtContraseñaR"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+											<div class="col-md-9">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtUsuarioR"></div>
+											</div>
+											<div class="col-md-3">
+												<div class="portfolio-item ">Contraseña:</div>
+											</div>
+											<div class="col-md-9">
+												<div class="portfolio-item"><input type="text" class='textField' id="txtContraseñaR"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" id="btnRegistro" class="btn btn-default">Aceptar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-    
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								<button type="button" id="btnRegistro" class="btn btn-default">Aceptar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<nav class="navbar navbar-inverse">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#"></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi Boda<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Mi Perfíl</a></li>
-            <li><a href="#">Invitados</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Banquetes<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Catering</a></li>
-            <li><a href="#">Hacienda</a></li>
-          </ul>
-        </li>  
-         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Proveedores<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Fotógrafo</a></li>
-            <li><a href="#">Vehículos</a></li>
-            <li><a href="#">Viajes</a></li>
-            <li><a href="#">Flores</a></li>
-            <li><a href="#">Invitaciones</a></li>
-            <li><a href="#">Música</a></li>
-          </ul>
-        </li>
-         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">El novio<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Trajes</a></li>
-          </ul>
-        </li> 
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">La novia<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Vestidos</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
-  </div>
- </nav>
- </div><!-- Row -->
-</div><!-- Container -->
-</div><!--Main menuArea-->
-<section id="portfolio" class="portfolio">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-                <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                    </ol>
+							<a class="navbar-brand" href="#"></a>
+						</div>
+						<div class="collapse navbar-collapse" id="myNavbar">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href="#">Home</a></li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Mi Boda<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Mi Perfíl</a></li>
+										<li><a href="#">Invitados</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Banquetes<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Catering</a></li>
+										<li><a href="#">Hacienda</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Proveedores<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Fotógrafo</a></li>
+										<li><a href="#">Vehículos</a></li>
+										<li><a href="#">Viajes</a></li>
+										<li><a href="#">Flores</a></li>
+										<li><a href="#">Invitaciones</a></li>
+										<li><a href="#">Música</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">El novio<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Trajes</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a class="dropdown-toggle" data-toggle="dropdown" href="#">La novia<span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#">Vestidos</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+								<li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+			<!-- Row -->
+		</div>
+		<!-- Container -->
+	</div>
+	<!--Main menuArea-->
+	<section id="portfolio" class="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<!-- Indicators -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#myCarousel" data-slide-to="3"></li>
+						</ol>
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin6.jpg?alt=media&token=fe9fd891-5e5e-4584-8655-b6d64352fa0d" style = "margin:0 auto" alt="">
-                        </div>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<div class="item active">
+								<img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin6.jpg?alt=media&token=fe9fd891-5e5e-4584-8655-b6d64352fa0d" style="margin:0 auto" alt="">
+							</div>
 
-                        <div class="item">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin7.jpg?alt=media&token=52081338-26b0-4cbc-8d71-bd7b9615c9a8" style = "margin:0 auto" alt="">
-                        </div>
+							<div class="item">
+								<img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/dustin7.jpg?alt=media&token=52081338-26b0-4cbc-8d71-bd7b9615c9a8" style="margin:0 auto" alt="">
+							</div>
 
-                        <div class="item">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db" style = "margin:0 auto" alt="">
-                        </div>
+							<div class="item">
+								<img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db" style="margin:0 auto" alt="">
+							</div>
 
-                        <div class="item">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalP.jpg?alt=media&token=91a1dc82-178e-4c00-8d1b-caa18dbf7f46" style = "margin:0 auto" alt="">
-                        </div>
-                        
-                    </div>
+							<div class="item">
+								<img src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalP.jpg?alt=media&token=91a1dc82-178e-4c00-8d1b-caa18dbf7f46" style="margin:0 auto" alt="">
+							</div>
 
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-            </div><!-- /.carousel slide -->
-        </div><!-- /.col-lg-10 -->
-    </div><!-- /.row  -->
-</div><!-- /.container -->
-</section>
-<div class="divColeccion">
-    <h1>Trajes hombre</h1>
-</div>
- 
-    <!-- End Modal -->
-<section id="portfolio" class="portfolio">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1 text-center">
-            <hr class="small">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinP.jpg?alt=media&token=72dd9a8e-bcad-4c5c-be21-652f50ab55d3" id="pTraje" alt=""></a>
-                    </div>
-                </div>
-        <!-- Modal 1-->
-        <div class="modal fade" id="myModalTraje1" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinP.jpg?alt=media&token=72dd9a8e-bcad-4c5c-be21-652f50ab55d3" id="pImg1">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
-                                   </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustin0.jpg?alt=media&token=e03abb6a-2ed8-4164-9dc3-6059d15d89fd" id='pImg1a' onclick="cambioTraje('pImg1a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustinc.jpg?alt=media&token=b9cf344e-0ea8-49f4-aa59-708e4261c8a9" id='pImg1b' onclick="cambioTraje('pImg1b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustind.jpg?alt=media&token=15f7f208-7e9e-4f17-8151-53abca028ea0" id='pImg1c' onclick="cambioTraje('pImg1c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustinb.jpg?alt=media&token=b1e8ea6f-ec71-46e8-ac20-9142e539aab0" id='pImg1d' onclick="cambioTraje('pImg1d');" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-        
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje2"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalP.jpg?alt=media&token=91a1dc82-178e-4c00-8d1b-caa18dbf7f46" id="pTraje2" alt=""></a>
-                    </div>
-                </div>
+						</div>
 
-                  <!-- Modal2 -->
-        <div class="modal fade" id="myModalTraje2" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalP.jpg?alt=media&token=91a1dc82-178e-4c00-8d1b-caa18dbf7f46" id="pImg2">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
-                                   </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal1.jpg?alt=media&token=9c28fd4a-1661-4de3-93df-8cf3ac1b3224" id='pImg2a' onclick="cambioTraje('pImg2a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal2.jpg?alt=media&token=add135b9-f305-4d74-beac-638fe94a9a18" id='pImg2b' onclick="cambioTraje('pImg2b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal3.jpg?alt=media&token=1d35bc13-18ca-4984-829a-894035041f22" id='pImg2c' onclick="cambioTraje('pImg2c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal4.jpg?alt=media&token=b449feb4-88cd-4b1a-8a99-51c4be0d52e7" id='pImg2d' onclick="cambioTraje('pImg2d');" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje3"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoP.jpg?alt=media&token=771941e4-231f-4844-a0bd-0ce49b9fb1c9" id="pTraje3" alt=""></a>
-                    </div>
-                </div>
-        <!-- Modal -->
-        <div class="modal fade" id="myModalTraje3" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoP.jpg?alt=media&token=771941e4-231f-4844-a0bd-0ce49b9fb1c9" id="pImg3">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                    
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p><br>
-                                        </div>
-                                        </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto0.jpg?alt=media&token=eae1e920-464d-48ea-96d3-1015eb925aac" id='pImg3a' onclick="cambioTraje('pImg3a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto2.jpg?alt=media&token=d8785205-baf1-45ff-bec8-df021828cca7" id='pImg3b'  onclick="cambioTraje('pImg3b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto3.jpg?alt=media&token=62fd010a-7a63-43b5-88e2-306dedefa276" id='pImg3c' onclick="cambioTraje('pImg3c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto4.jpg?alt=media&token=9e2a8598-a15f-46e3-90b5-375b5a3fe21e" id='pImg3d' onclick="cambioTraje('pImg3d');" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-                
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje4"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FFormulaP.jpg?alt=media&token=47cd937a-4068-4dd8-ba3b-b038a55ddb43" id="pTraje4" alt=""></a>
-                    </div>
-                </div>
-                <div class="modal fade" id="myModalTraje4" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FFormulaP.jpg?alt=media&token=47cd937a-4068-4dd8-ba3b-b038a55ddb43" id="pImg4">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
-                                   </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula0.jpg?alt=media&token=3638f1d2-fe50-480c-9ad3-7a9d962f6080" id='pImg4a' onclick="cambioTraje('pImg4a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula2.jpg?alt=media&token=5d7a7ff4-5961-4bd1-90c2-b40658c0a670" id='pImg4b' onclick="cambioTraje('pImg4b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula3.jpg?alt=media&token=c9de6ae6-e671-4f18-9599-5d3b5b744275" id='pImg4c' onclick="cambioTraje('pImg4c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula5.jpg?alt=media&token=f17c55ce-5ed4-43ef-9ddd-d294c9400336" id='pImg4d' onclick="cambioTraje('pImg4d');" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-                
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje5"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyP.jpg?alt=media&token=38d77cf0-32f1-4342-925c-cb3cea8c877a" id="pTraje5" alt=""></a>
-                    </div>
-                </div>
-        <!-- Modal 5-->
-        <div class="modal fade" id="myModalTraje5" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyP.jpg?alt=media&token=38d77cf0-32f1-4342-925c-cb3cea8c877a" id="pImg5">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
-                                   </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy1.jpg?alt=media&token=af881791-21d5-48d5-97ca-204735e8bab7" id='pImg5a' onclick="cambioTraje('pImg5a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy2.jpg?alt=media&token=fbad0251-40c8-4f92-a107-640b4115ff40" id='pImg5b' onclick="cambioTraje('pImg5b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy3.jpg?alt=media&token=a4d25767-29e8-4293-9861-abef5cf04a85" id='pImg5c' onclick="cambioTraje('pImg5c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy4.jpg?alt=media&token=4263046f-e277-46db-a722-7bbd3d074082" id='pImg5d' onclick="cambioTraje(pImg5d);" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-               
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje6"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyP.jpg?alt=media&token=61c35384-2822-4a56-8849-ce7f513f811e" id="pTraje6" alt=""></a>
-                    </div>
-                </div>
-              <!-- Modal 6-->
-        <div class="modal fade" id="myModalTraje6" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyP.jpg?alt=media&token=61c35384-2822-4a56-8849-ce7f513f811e" id="pImg6">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
-                                   </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp1.jpg?alt=media&token=3a5bdf4c-ab7c-44b9-8f4d-c529e75b4f3e" id='pImg6a' onclick="cambioTraje('pImg6a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp2.jpg?alt=media&token=bbb6a8ac-b70a-471e-8d62-4fcf97ba88bc" id='pImg6b' onclick="cambioTraje('pImg6b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp4.jpg?alt=media&token=6bc26472-522c-44bf-a9b8-dbd1212a32c1" id='pImg6c' onclick="cambioTraje('pImg6c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp3.jpg?alt=media&token=3806e06c-425e-4ce5-8335-503e7d863efd" id='pImg6d' onclick="cambioTraje('pImg6d');" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje7"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db" id="pTraje7" alt=""></a>
-                    </div>
-                </div>
-                 <!-- Modal 7-->
-        <div class="modal fade" id="myModalTraje7" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db" id="pImg7">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
-                                   </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FemidioP.jpg?alt=media&token=54f1889e-0338-4431-95c8-57827fa5d604" id='pImg7a' onclick="cambioTraje('pImg7a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio2.jpg?alt=media&token=88362d38-43e2-4784-8bb9-78ea546c765a" id='pImg7b' onclick="cambioTraje('pImg7b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio3.jpg?alt=media&token=d16e5564-21d5-4a61-ac2e-7d3cc2f02ffb" id='pImg7c' onclick="cambioTraje('pImg7c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio9.jpg?alt=media&token=2f0ab7e2-2746-48f6-99ef-43765c2d9379" id='pImg7d' onclick="cambioTraje('pImg7d');" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-                <div class="col-md-6 col-sm-6">
-                    <div class="portfolio-item">
-                        <a href="#" data-toggle="modal" data-target="#myModalTraje8"><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Fprueba.jpg?alt=media&token=909c4df4-741c-4d01-b591-4ef881738998" id="pTraje8" alt=""></a>
-                    </div>
-                </div>
-                <!-- Modal 8-->
-        <div class="modal fade" id="myModalTraje8" role="dialog">
-            <div class="tamañoDialog">
-                <div class="modalContenido">
-                    <div class="modal-body">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1" >
-                                <div class='row'>
-                                    <div class="col-md-5">
-                                            <img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Fprueba.jpg?alt=media&token=909c4df4-741c-4d01-b591-4ef881738998" id="pImg8">
-                                    </div>
-                                    <div class="col-md-6 cajaDocumentacion">
-                                        <h2 class='tituloLetra'>Dustin</h2>
-                                        <h4 class='nombreLetra'>Traje de hombre Dustin</h4>
-                                        <h4 class='nombreLetra'>182€</h4>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <div class="descriptionTextArea"><p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p></div>
-                                        <br>
-                                        <div class="descriptionTextArea"><p>Classic Fit: </p><p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
-                                        <br></div>
-                                   </div>
-                                    <div class="col-md-6 cajaDocumentacion2">
-                                        <div>
-                                            <button class='botonCarro'>Añadir a la cesta</button>
-                                            <button class='botonFavorito'>Fav</button>
-                                        </div>
-                                        
-                                   </div>
-                           </div><!-- row-->
-                        </div><!-- márgenes-->
-                    </div>
-                    </div><!--modalBody-->
-                    <div class="modal-footer">
-                        <div class="row" >
-                            <div class="margenes col-lg-offset-1 text-center" >
-                                <div class='row'>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <a><img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FdustinpP.jpg?alt=media&token=05a8dd92-6423-43de-b823-c80229092d5e" id='pImg8a' onclick="cambioTraje('pImg8a');" alt=""></a></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fazulb.jpg?alt=media&token=5bbfeb77-a9ec-427e-a691-8ae0a0c9be9a" id='pImg8b' onclick="cambioTraje('pImg8b');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FdustinpPantalon.jpg?alt=media&token=a638bb93-2fa8-464e-9b44-c85a8a47b34d" id='pImg8c' onclick="cambioTraje('pImg8c');" alt=""></div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="portfolio-item">
-                                            <img class="img-responsive"  src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FdustinpPantalonTrasero.jpg?alt=media&token=878f639e-b12e-416a-81a2-fa064f2e711f" id='pImg8d' onclick="cambioTraje('pImg8d');" alt=""></div>
-                                    </div>
-                                </div><!-- row-->
-                           </div><!-- márgenes-->
-                        </div>
-                    </div><!--modalFooter-->
-                </div>
-            </div><!--modalTamaño-->
-        </div><!--modalFade-->
-        <!-- EndModal -->
-            </div><!-- /.row (nested) -->
-        </div><!-- /.col-lg-10 -->
-    </div><!-- /.row -->
-    </div><!-- /.container -->
-</section>
-<footer class="contenedorPie">
-    <div class="container">
-        <div class="row letraFooter">
-            <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h4><strong>Weddings</strong></h4>
-                <p>4424 Nervión <br> Sevilla, CP 41016</p>
-                <ul class="list-unstyled">
-                    <li><i class="fa fa-phone fa-fw"></i> 954799724</li>
-                    <li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">weddings@gmail.com</a> </li>
-                </ul>
-                <br>
-                <ul class="list-inline">
-                    <li> <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a> </li>
-                    <li> <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a> </li>
-                    <li> <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a> </li>
-                </ul>
-                <hr class="small">
-                <p class="text-muted">Copyright &copy; Website 2017</p>
-            </div>
-        </div>
-    </div>
-    <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> </footer><!-- Footer -->
+						<!-- Left and right controls -->
+						<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
+					<!-- /.carousel slide -->
+				</div>
+				<!-- /.col-lg-10 -->
+			</div>
+			<!-- /.row  -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<div class="divColeccion">
+		<h1>Trajes hombre</h1>
+	</div>
 
-    <script src="js/controlador.js"></script>
+	<!-- End Modal -->
+	<section id="portfolio" class="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<hr class="small">
+					<div class="row">
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje1"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinP.jpg?alt=media&token=72dd9a8e-bcad-4c5c-be21-652f50ab55d3" id="pTraje" alt=""></a>
+							</div>
+						</div>
+						<!-- Modal 1-->
+						<div class="modal fade" id="myModalTraje1" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FDustinP.jpg?alt=media&token=72dd9a8e-bcad-4c5c-be21-652f50ab55d3" id="pImg1">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+															<br></div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustin0.jpg?alt=media&token=e03abb6a-2ed8-4164-9dc3-6059d15d89fd" id='pImg1a' onclick="cambioTraje('pImg1a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustinc.jpg?alt=media&token=b9cf344e-0ea8-49f4-aa59-708e4261c8a9" id='pImg1b' onclick="cambioTraje('pImg1b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustind.jpg?alt=media&token=15f7f208-7e9e-4f17-8151-53abca028ea0" id='pImg1c' onclick="cambioTraje('pImg1c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fdustinb.jpg?alt=media&token=b1e8ea6f-ec71-46e8-ac20-9142e539aab0" id='pImg1d' onclick="cambioTraje('pImg1d');" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje2"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalP.jpg?alt=media&token=91a1dc82-178e-4c00-8d1b-caa18dbf7f46" id="pTraje2" alt=""></a>
+							</div>
+						</div>
+
+						<!-- Modal2 -->
+						<div class="modal fade" id="myModalTraje2" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FPalP.jpg?alt=media&token=91a1dc82-178e-4c00-8d1b-caa18dbf7f46" id="pImg2">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+															<br></div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal1.jpg?alt=media&token=9c28fd4a-1661-4de3-93df-8cf3ac1b3224" id='pImg2a' onclick="cambioTraje('pImg2a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal2.jpg?alt=media&token=add135b9-f305-4d74-beac-638fe94a9a18" id='pImg2b' onclick="cambioTraje('pImg2b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal3.jpg?alt=media&token=1d35bc13-18ca-4984-829a-894035041f22" id='pImg2c' onclick="cambioTraje('pImg2c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fpal4.jpg?alt=media&token=b449feb4-88cd-4b1a-8a99-51c4be0d52e7" id='pImg2d' onclick="cambioTraje('pImg2d');" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje3"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoP.jpg?alt=media&token=771941e4-231f-4844-a0bd-0ce49b9fb1c9" id="pTraje3" alt=""></a>
+							</div>
+						</div>
+						<!-- Modal -->
+						<div class="modal fade" id="myModalTraje3" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FRobertoP.jpg?alt=media&token=771941e4-231f-4844-a0bd-0ce49b9fb1c9" id="pImg3">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p><br>
+														</div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto0.jpg?alt=media&token=eae1e920-464d-48ea-96d3-1015eb925aac" id='pImg3a' onclick="cambioTraje('pImg3a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto2.jpg?alt=media&token=d8785205-baf1-45ff-bec8-df021828cca7" id='pImg3b' onclick="cambioTraje('pImg3b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto3.jpg?alt=media&token=62fd010a-7a63-43b5-88e2-306dedefa276" id='pImg3c' onclick="cambioTraje('pImg3c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Froberto4.jpg?alt=media&token=9e2a8598-a15f-46e3-90b5-375b5a3fe21e" id='pImg3d' onclick="cambioTraje('pImg3d');" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje4"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FFormulaP.jpg?alt=media&token=47cd937a-4068-4dd8-ba3b-b038a55ddb43" id="pTraje4" alt=""></a>
+							</div>
+						</div>
+						<div class="modal fade" id="myModalTraje4" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FFormulaP.jpg?alt=media&token=47cd937a-4068-4dd8-ba3b-b038a55ddb43" id="pImg4">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+															<br></div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula0.jpg?alt=media&token=3638f1d2-fe50-480c-9ad3-7a9d962f6080" id='pImg4a' onclick="cambioTraje('pImg4a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula2.jpg?alt=media&token=5d7a7ff4-5961-4bd1-90c2-b40658c0a670" id='pImg4b' onclick="cambioTraje('pImg4b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula3.jpg?alt=media&token=c9de6ae6-e671-4f18-9599-5d3b5b744275" id='pImg4c' onclick="cambioTraje('pImg4c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fformula5.jpg?alt=media&token=f17c55ce-5ed4-43ef-9ddd-d294c9400336" id='pImg4d' onclick="cambioTraje('pImg4d');" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje5"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyP.jpg?alt=media&token=38d77cf0-32f1-4342-925c-cb3cea8c877a" id="pTraje5" alt=""></a>
+							</div>
+						</div>
+						<!-- Modal 5-->
+						<div class="modal fade" id="myModalTraje5" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FTommyP.jpg?alt=media&token=38d77cf0-32f1-4342-925c-cb3cea8c877a" id="pImg5">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+															<br></div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy1.jpg?alt=media&token=af881791-21d5-48d5-97ca-204735e8bab7" id='pImg5a' onclick="cambioTraje('pImg5a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy2.jpg?alt=media&token=fbad0251-40c8-4f92-a107-640b4115ff40" id='pImg5b' onclick="cambioTraje('pImg5b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy3.jpg?alt=media&token=a4d25767-29e8-4293-9861-abef5cf04a85" id='pImg5c' onclick="cambioTraje('pImg5c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Ftomy4.jpg?alt=media&token=4263046f-e277-46db-a722-7bbd3d074082" id='pImg5d' onclick="cambioTraje(pImg5d);" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje6"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyP.jpg?alt=media&token=61c35384-2822-4a56-8849-ce7f513f811e" id="pTraje6" alt=""></a>
+							</div>
+						</div>
+						<!-- Modal 6-->
+						<div class="modal fade" id="myModalTraje6" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FeasyP.jpg?alt=media&token=61c35384-2822-4a56-8849-ce7f513f811e" id="pImg6">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+															<br></div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp1.jpg?alt=media&token=3a5bdf4c-ab7c-44b9-8f4d-c529e75b4f3e" id='pImg6a' onclick="cambioTraje('pImg6a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp2.jpg?alt=media&token=bbb6a8ac-b70a-471e-8d62-4fcf97ba88bc" id='pImg6b' onclick="cambioTraje('pImg6b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp4.jpg?alt=media&token=6bc26472-522c-44bf-a9b8-dbd1212a32c1" id='pImg6c' onclick="cambioTraje('pImg6c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Feasyp3.jpg?alt=media&token=3806e06c-425e-4ce5-8335-503e7d863efd" id='pImg6d' onclick="cambioTraje('pImg6d');" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje7"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db" id="pTraje7" alt=""></a>
+							</div>
+						</div>
+						<!-- Modal 7-->
+						<div class="modal fade" id="myModalTraje7" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FEmilioP.jpg?alt=media&token=eff5a670-22c3-4179-9b48-4530157595db" id="pImg7">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+															<br></div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2FemidioP.jpg?alt=media&token=54f1889e-0338-4431-95c8-57827fa5d604" id='pImg7a' onclick="cambioTraje('pImg7a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio2.jpg?alt=media&token=88362d38-43e2-4784-8bb9-78ea546c765a" id='pImg7b' onclick="cambioTraje('pImg7b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio3.jpg?alt=media&token=d16e5564-21d5-4a61-ac2e-7d3cc2f02ffb" id='pImg7c' onclick="cambioTraje('pImg7c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Femidio9.jpg?alt=media&token=2f0ab7e2-2746-48f6-99ef-43765c2d9379" id='pImg7d' onclick="cambioTraje('pImg7d');" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+						<div class="col-md-6 col-sm-6">
+							<div class="portfolio-item">
+								<a href="#" data-toggle="modal" data-target="#myModalTraje8"><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Fprueba.jpg?alt=media&token=909c4df4-741c-4d01-b591-4ef881738998" id="pTraje8" alt=""></a>
+							</div>
+						</div>
+						<!-- Modal 8-->
+						<div class="modal fade" id="myModalTraje8" role="dialog">
+							<div class="tamañoDialog">
+								<div class="modalContenido">
+									<div class="modal-body">
+										<div class="row">
+											<div class="margenes col-lg-offset-1">
+												<div class='row'>
+													<div class="col-md-5">
+														<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2Fprueba.jpg?alt=media&token=909c4df4-741c-4d01-b591-4ef881738998" id="pImg8">
+													</div>
+													<div class="col-md-6 cajaDocumentacion">
+														<h2 class='tituloLetra'>Dustin</h2>
+														<h4 class='nombreLetra'>Traje de hombre Dustin</h4>
+														<h4 class='nombreLetra'>182€</h4>
+														<br>
+														<br>
+														<br>
+														<div class="descriptionTextArea">
+															<p class="contenidoTextArea">Traje en color negro, con americana con cierre de dos botones, solapa de muesca, dos aberturas en parte trasera y tres bolsillos en parte delantera. </p>
+														</div>
+														<br>
+														<div class="descriptionTextArea">
+															<p>Classic Fit: </p>
+															<p class="contenidoTextArea">El ajuste de toda la vida. Americana recta y formal, pantalón holgado y elegante. </p>
+															<br></div>
+													</div>
+													<div class="col-md-6 cajaDocumentacion2">
+														<div>
+															<button class='botonCarro'>Añadir a la cesta</button>
+															<button class='botonFavorito'>Fav</button>
+														</div>
+
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalBody-->
+									<div class="modal-footer">
+										<div class="row">
+											<div class="margenes col-lg-offset-1 text-center">
+												<div class='row'>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<a><img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FdustinpP.jpg?alt=media&token=05a8dd92-6423-43de-b823-c80229092d5e" id='pImg8a' onclick="cambioTraje('pImg8a');" alt=""></a>
+														</div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20de%20Novio%2Fazulb.jpg?alt=media&token=5bbfeb77-a9ec-427e-a691-8ae0a0c9be9a" id='pImg8b' onclick="cambioTraje('pImg8b');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FdustinpPantalon.jpg?alt=media&token=a638bb93-2fa8-464e-9b44-c85a8a47b34d" id='pImg8c' onclick="cambioTraje('pImg8c');" alt=""></div>
+													</div>
+													<div class="col-md-2">
+														<div class="portfolio-item">
+															<img class="img-responsive" src="https://firebasestorage.googleapis.com/v0/b/proyectoeventos-53630.appspot.com/o/Trajes%20Alejandro%2FdustinpPantalonTrasero.jpg?alt=media&token=878f639e-b12e-416a-81a2-fa064f2e711f" id='pImg8d' onclick="cambioTraje('pImg8d');" alt=""></div>
+													</div>
+												</div>
+												<!-- row-->
+											</div>
+											<!-- márgenes-->
+										</div>
+									</div>
+									<!--modalFooter-->
+								</div>
+							</div>
+							<!--modalTamaño-->
+						</div>
+						<!--modalFade-->
+						<!-- EndModal -->
+					</div>
+					<!-- /.row (nested) -->
+				</div>
+				<!-- /.col-lg-10 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<footer class="contenedorPie">
+		<div class="container">
+			<div class="row letraFooter">
+				<div class="col-lg-10 col-lg-offset-1 text-center">
+					<h4><strong>Weddings</strong></h4>
+					<p>4424 Nervión <br> Sevilla, CP 41016</p>
+					<ul class="list-unstyled">
+						<li><i class="fa fa-phone fa-fw"></i> 954799724</li>
+						<li><i class="fa fa-envelope-o fa-fw"></i> <a href="mailto:name@example.com">weddings@gmail.com</a> </li>
+					</ul>
+					<br>
+					<ul class="list-inline">
+						<li> <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a> </li>
+						<li> <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a> </li>
+						<li> <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a> </li>
+					</ul>
+					<hr class="small">
+					<p class="text-muted">Copyright &copy; Website 2017</p>
+				</div>
+			</div>
+		</div>
+		<a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a> </footer>
+	<!-- Footer -->
+
+	<script src="js/controlador.js"></script>
 	<script src="js/modeloPersona.js"></script>
 
 </body>
+
 </html>
