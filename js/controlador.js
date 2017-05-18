@@ -54,7 +54,7 @@ function registrar() {
 		dir = document.getElementById("txtDir2").value,
 		usu = document.getElementById("txtUsuario2").value,
 		pass = document.getElementById("txtContraseña2").value;
-
+		
 		registrarPersona(nom, ape, dn, dir, usu, pass);
 }
 

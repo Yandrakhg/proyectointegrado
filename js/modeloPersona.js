@@ -2,9 +2,10 @@ const AUTH = firebase.auth();
 var newPersona;
 
 function iniciarSesion(email, pass) {
-	const promise = AUTH.signInWithEmailAndPassword(email, pass);
-	promise.catch(e => console.log(e.message));
-	alert(email+"registrado")
+//	const promise = 
+	AUTH.signInWithEmailAndPassword(email, pass);
+//	promise.catch(e => console.log(e.message));
+	alert(email+" registrado")
 }
 	
 
