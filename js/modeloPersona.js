@@ -1,4 +1,6 @@
 const AUTH = firebase.auth();
+const DATA = firebase.database();
+
 var newPersona;
 
 function iniciarSesion(email, pass) {
@@ -40,21 +42,17 @@ function recuperarUsuario() {
 		var uid, dn, nom, ape, dir;
 		if (user != null) {
 			uid = user.uid;
-			dn = user.dni;
-			nom = user.nombre;
-			ape = user.apellidos;
-			dir = user.direccion;
-
 			console.log("id: " + uid);
-			console.log("dni: " + dn);
-			console.log("nombre: " + nom);
-			console.log("apellidos: " + ape);
-			console.log("direccion: " + dir);
-		} else {
-			console.log("Cargando...");
+
+			DATA.ref("Usuarios/").orderByChild("id").equalTo(getCurrentUser().uid).once('value', function (codi) {
+				var d= codi.val();
+				usu= DATA.ref("Usuarios/"+d);
+				console.log("nombre: "+usu.nombre);
+			});
 		}
 	});
-}
+};
+
 AUTH.onAuthStateChanged(function (user) {
 	if (user) {
 		if (AUTH.currentUser.displayName == null) {
