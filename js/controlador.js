@@ -15,7 +15,6 @@ window.onload = function () {
 		case 2:
 			document.getElementById("btnLogin2").addEventListener('click', login);
 			document.getElementById("btnRegistro2").addEventListener('click', registrar);
-			document.getElementById("MiPerfil2").addEventListener('click', recuperarUsuario);
 			break;
 	}
 };
@@ -28,7 +27,6 @@ function login() {
 	var email = document.getElementById("email").value,
 		pass = document.getElementById("pass").value;
 	iniciarSesion(email, pass);
-	recuperarUsuario();
 }
 
 //funcion registro
@@ -43,6 +41,3 @@ function registrar() {
 
 	registrarPersona(nom, ape, dn, dir, usu, pass);
 }
-//ref.on('value', function(snapshot) {
-//console.log(snapshot.val());
-//});

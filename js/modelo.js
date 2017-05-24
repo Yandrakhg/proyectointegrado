@@ -1,13 +1,11 @@
 const REF = firebase.database();
 
-function crearPersona(user) {
-	var usuario = REF.ref('Usuarios');
-	usuario.push(user);
-}
 
 function insertarPersona(newPersona, uid) {
-	newPersona.id = uid;
-	crearPersona(newPersona)
+	var usuario = REF.ref('Usuarios/'+uid);
+//	crearPersona(newPersona);
+	usuario.set(newPersona);
+	
 }
 
 			function cambioTraje(img) {
